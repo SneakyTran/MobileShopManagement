@@ -1,0 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    @include textStyleWithoutColor($fs-em-3, $fw-400, $lh-6);
+    font-style: normal;
+    color: $color-grey-1;
+}

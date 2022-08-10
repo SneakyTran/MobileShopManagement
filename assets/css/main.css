@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.4;
+  font-style: normal;
+  color: #777777;
+}/*# sourceMappingURL=main.css.map */
