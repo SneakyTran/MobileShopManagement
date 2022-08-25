@@ -12,4 +12,52 @@ body {
   line-height: 1.4;
   font-style: normal;
   color: #777777;
+}
+
+header {
+  background-color: #ffffff;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+header .first {
+  margin: auto;
+  width: 79%;
+}
+header .first .header_content {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+header .first .header_content img {
+  margin: 20px 0;
+}
+header .first .header_content a {
+  text-decoration: none;
+}
+header .first .header_content a span {
+  color: #777777;
+  font-size: 15px;
+}
+header .first .header_content nav {
+  display: flex;
+  text-align: center;
+}
+header .first .header_content nav li {
+  list-style: none;
+  display: inline;
+  padding: 22px 15px;
+}
+header .first .header_content ul {
+  display: flex;
+  text-align: center;
+  margin-right: 25px;
+}
+header .first .header_content .header_icon {
+  padding: 24px 20px;
+}
+header .first .header_content .header_icon i {
+  font-size: 15px;
+  padding: 0 8px;
 }/*# sourceMappingURL=main.css.map */
