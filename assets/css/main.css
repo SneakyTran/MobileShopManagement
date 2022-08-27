@@ -6,10 +6,352 @@
 
 html,
 body {
+  font-size: 14px;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-size: 1em;
   font-weight: 400;
   line-height: 1.4;
   font-style: normal;
   color: #777777;
+}
+
+ul,
+li {
+  margin: 0;
+  list-style-type: none;
+  display: inline-block;
+}
+
+li {
+  padding: 13px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 10px;
+}
+
+header .header__top {
+  font-size: 14px;
+}
+header .header__top__content {
+  color: #777777;
+  font-size: 0.7857em;
+  font-weight: 600;
+  min-height: 42px;
+}
+header .header__top__content,
+header .header__right {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+header .header__left select,
+header .header__right {
+  flex: 1 0 50%;
+}
+header .header__left select {
+  width: 57%;
+  border: none;
+}
+header .header__left select:focus {
+  outline: none;
+}
+header .header__right a {
+  color: #777777;
+}
+header .header__right .gap {
+  color: #e7e7e7;
+  margin: 0 8px 0 4px;
+}
+header .header__right .header__social i {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  line-height: 29px;
+  border-radius: 50%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+header .header__right .header__social i:hover {
+  color: #ffffff;
+  opacity: 0.9;
+}
+header .header__right .header__social i.fa-facebook-f:hover {
+  background-color: #3b5a9a;
+}
+header .header__right .header__social i.fa-twitter:hover {
+  background-color: #1aa9e1;
+}
+header .header__right .header__social i.fa-instagram:hover {
+  background-color: #7c4a3a;
+}
+header .header__bottom {
+  border: 1px solid #e7e7e7;
+}
+header .header__bottom .header__bottom__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header__bottom .header__bleft,
+header .header__bottom .header__bright {
+  flex: 1 0 44.5%;
+}
+header .header__bottom .header__bleft {
+  min-height: 40px;
+  padding: 28px 0;
+  color: #777777;
+  font-size: 13px;
+  font-weight: 400;
+}
+header .header__bottom .header__bleft .search--area input {
+  background-color: #eeeeee;
+  border: 1px solid #eeeeee;
+  padding: 8px 20px;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+}
+header .header__bottom .header__bleft .search--area input:focus {
+  outline: none;
+}
+header .header__bottom .header__bleft .search--area button {
+  background-color: #eeeeee;
+  border: 1px solid #eeeeee;
+  padding: 8px 12px;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+}
+header .header__bottom .header__bleft .search__category {
+  display: inline-block;
+}
+header .header__bottom .header__bleft .search__category select {
+  background-color: #eeeeee;
+  border: 1px solid #eeeeee;
+  padding: 8px 12px;
+}
+header .header__bottom .header__bleft .search__category select:focus {
+  outline: none;
+}
+header .header__bottom .header__logo {
+  padding: 20px 15px;
+}
+header .header__bottom .header__bright {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .header__bottom .header__bright .header__contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header__bottom .header__bright .header__contact .icon__user,
+header .header__bottom .header__bright .header__contact .icon__heart {
+  display: inline-block;
+  color: #222529;
+  font-size: 27px;
+  font-weight: inherit;
+}
+header .header__bottom .header__bright .header__contact .icon__user i,
+header .header__bottom .header__bright .header__contact .icon__heart i {
+  padding: 0 5px;
+}
+header .header__bottom .header__bright .header__contact .icon__user {
+  margin-left: 5px;
+  margin-right: 0.5rem;
+}
+header .header__bottom .header__bright .header__contact .icon__heart {
+  margin-right: 0.5rem;
+}
+header .header__bottom .header__bright .contact__phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header__bottom .header__bright .contact__phone .phone__icon {
+  font-size: 29px;
+  height: 1em;
+  color: #222529;
+  line-height: 1;
+  display: inline-block;
+  margin-right: 10px;
+}
+header .header__bottom .header__bright .contact__phone .phone__content h3 {
+  color: #777777;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 3px;
+}
+header .header__bottom .header__bright .contact__phone .phone__content p {
+  color: #222529;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 0.9;
+  margin-bottom: 0;
+}
+header .header__bottom .header__bright .mini--cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+header .header__bottom .header__bright .mini--cart .lni-cart {
+  position: relative;
+  color: #222529;
+  font-size: 27px;
+  font-weight: inherit;
+  line-height: 25px;
+}
+header .header__bottom .header__bright .mini--cart .lni-cart::after {
+  content: "0";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: -5px;
+  top: -5px;
+  text-align: center;
+  line-height: 16px;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 600;
+  background-color: #ff5b5b;
+  border-radius: 50%;
+}
+header .header__bottom .header__bright .mini--cart .fa-chevron-down {
+  font-size: 14px;
+  line-height: 14px;
+  padding-left: 5px;
+}
+header .mbs__navbar .navbar-expand-lg .navbar-collapse {
+  justify-content: center;
+}
+header .mbs__navbar .navbar {
+  padding: 0;
+}
+header .mbs__navbar .nav-item {
+  position: relative;
+}
+header .mbs__navbar .nav-item:hover .nav-link {
+  color: #7aa93c;
+}
+header .mbs__navbar .nav-item::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  top: 0;
+  height: 2px;
+  left: 50%;
+  background-color: #7aa93c;
+  transition: all 0.3s ease;
+  transform: scaleX(0);
+}
+header .mbs__navbar .nav-item:hover::before {
+  width: 100%;
+  left: 0;
+  transform: scaleX(1);
+}
+header .mbs__navbar .nav-item.active .nav-link {
+  color: #7aa93c;
+}
+header .mbs__navbar .nav-item.active::before {
+  width: 100%;
+  left: 0;
+  transform: scaleX(1);
+}
+header .mbs__navbar .nav-item:hover .sub__menu--open {
+  display: block;
+}
+header .mbs__navbar .nav-item .sub__menu {
+  position: relative;
+}
+header .mbs__navbar .nav-item .sub__menu--open {
+  display: none;
+  position: absolute;
+  width: 650px;
+  left: 0;
+  right: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+}
+header .mbs__navbar .nav-item .sub__menu--open .menu__item {
+  padding: 15px 10px 0;
+}
+header .mbs__navbar .nav-item .sub__menu--open li {
+  padding: 4px 0;
+}
+header .mbs__navbar .nav-item .sub__menu--open li a {
+  color: #696969;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+}
+header .mbs__navbar .nav-item .sub__menu--open li label {
+  margin: 0;
+  color: #333;
+  font-size: 12px;
+  font-weight: 700;
+}
+header .mbs__navbar .nav-item .sub__menu--open li span {
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 400;
+  padding: 1px 2px;
+  background-color: #0cc485;
+  border-radius: 2px;
+  position: relative;
+  margin-top: -3px;
+  margin-left: 3px;
+}
+header .mbs__navbar .nav-item .sub__menu--open li span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -6px;
+  display: block;
+  width: 5px;
+  height: 5px;
+  border: 3px solid transparent;
+  margin-top: -3px;
+  border-right-color: #0cc485;
+}
+header .mbs__navbar .nav-item .sub__menu--open li:hover a, header .mbs__navbar .nav-item .sub__menu--open li:hover span {
+  text-decoration: underline;
+}
+header .mbs__navbar .nav-item .sub__menu--open .sub__menu__img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: -15px center;
+}
+header .mbs__navbar .nav-item .sub__menu--open .img__category {
+  background-image: url("../img/menu-banner.jpg");
+}
+header .mbs__navbar .nav-item .sub__menu--open .img__product {
+  background-image: url("../img/shop1_megamenu.jpg");
+  background-position: -3px center;
+}
+header .mbs__navbar .nav-item .li__menu__item {
+  display: block;
+}
+header .mbs__navbar .nav-item .menu--small {
+  width: 230px;
+}
+header .mbs__navbar .nav-item .menu--small a {
+  color: #777777;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  padding: 8px 15px;
+}
+header .mbs__navbar .nav-link {
+  color: #222529;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.3s ease;
 }/*# sourceMappingURL=main.css.map */

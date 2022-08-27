@@ -6,8 +6,31 @@
 
 html,
 body {
+    font-size: 14px;
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     @include textStyleWithoutColor($fs-em-3, $fw-400, $lh-6);
     font-style: normal;
     color: $color-grey-1;
+}
+
+ul,
+li {
+    margin: 0;
+    list-style-type: none;
+    display: inline-block;
+}
+
+li {
+    padding: $pd-2 - 2;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 10px;
 }

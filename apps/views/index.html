@@ -18,6 +18,9 @@
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- LINE ICON CSS -->
+    <link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css">
+
     <!-- BS 4.6 CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -32,7 +35,230 @@
 
 <body>
     <!-- HEADER -->
-    <header></header>
+    <header>
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top__content">
+                    <div class="header__left">
+                        <select name="currency" id="">
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR-EURO</option>
+                        </select>
+                    </div>
+                    <div class="header__right">
+                        <div class="header__welcome">
+                            <ul>
+                                <li><a>Default Welcome Msg!</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Sign In</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Create An Account</a></li>
+                            </ul>
+                        </div>
+                        <div class="gap">|</div>
+                        <div class="header__social">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="container">
+                <div class="header__bottom__content">
+                    <div class="header__bleft">
+                        <div class="search--area">
+                            <form>
+                                <input type="text" placeholder="Search...">
+                                <div class="search__category">
+                                    <select name="" id="">
+                                        <option value="0">All Categories</option>
+                                    </select>
+                                </div>
+                                <button type="submit">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="header__logo">
+                        <img class="img-fluid" src="../../assets/img/logo_ecomblack_lg.png" alt="">
+                    </div>
+                    <div class="header__bright">
+                        <div class="header__contact">
+                            <div class="contact__phone mx-4">
+                                <div class="phone__icon">
+                                    <i class="lni lni-phone"></i>
+                                </div>
+                                <div class="phone__content">
+                                    <h3>CALL US NOW</h3>
+                                    <p>+123 5678 890</p>
+                                </div>
+                            </div>
+                            <a class="icon__user" href="#">
+                                <i class="lni lni-user"></i>
+                            </a>
+                            <a class="icon__heart" href="#">
+                                <i class="lni lni-heart"></i>
+                            </a>
+                        </div>
+                        <div class="mini--cart">
+                            <i class="lni lni-cart"></i>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mbs__navbar">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active"><a href="#" class="nav-link">HOME</a></li>
+                            <li class="nav-item sub__menu">
+                                <a href="#" class="nav-link">CATEGORIES
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                <div class="sub__menu--open">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <div class="row">
+                                                    <div class="col-6 menu__item">
+                                                        <ul>
+                                                            <li class="pt-0"><label>VARIATIONS 1</label></li>
+                                                            <li><a href="#">FULLWIDTH BANNER</a></li>
+                                                            <li><a href="#">BOXED IMAGE BANNER</a></li>
+                                                            <li><a href="#">BOXED SLIDER BANNER</a></li>
+                                                            <li><a href="#">LEFT SIDEBAR</a></li>
+                                                            <li><a href="#">RIGHT SIDEBAR</a></li>
+                                                            <li><a href="#">PRODUCT FLEX GRID</a></li>
+                                                            <li><a href="#">PRODUCT LIST ITEM TYPES</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-6 menu__item">
+                                                        <ul>
+                                                            <li class="pt-0"><label>VARIATIONS 2</label></li>
+                                                            <li><a href="#">AJAX INFINITE SCROLL
+                                                                    <span class="label--new">NEW</span>
+                                                                </a>
+                                                            </li>
+                                                            <li><a href="#">3 COLUMNS PRODUCTS</a></li>
+                                                            <li><a href="#">4 COLUMNS PRODUCTS</a></li>
+                                                            <li><a href="#">5 COLUMNS PRODUCTS</a></li>
+                                                            <li><a href="#">6 COLUMNS PRODUCTS</a></li>
+                                                            <li><a href="#">7 COLUMNS PRODUCTS</a></li>
+                                                            <li><a href="#">8 COLUMNS PRODUCTS</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 p-0">
+                                                <div class="sub__menu__img img__category">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item sub__menu"><a href="#" class="nav-link">PRODUCTS <i
+                                        class="fa-solid fa-chevron-down"></i></a>
+                                <div class="sub__menu--open">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <div class="row">
+                                                    <div class="col-6 menu__item">
+                                                        <ul>
+                                                            <li class="pt-0"><label>PRODUCT PAGES</label></li>
+                                                            <li><a href="#">SIMPLE PRODUCT</a></li>
+                                                            <li><a href="#">CONFIGURABLE PRODUCT</a></li>
+                                                            <li><a href="#">BUNDLE PRODUCT</a></li>
+                                                            <li><a href="#">GROUPED PRODUCT</a></li>
+                                                            <li><a href="#">DOWNLOADABLE PRODUCT</a></li>
+                                                            <li><a href="#">ADDTOCART STICKY</a></li>
+                                                            <li><a href="#">VERTICAL TABS</a></li>
+                                                            <li><a href="#">ACCORDION TABS</a></li>
+                                                            <li><a href="#">STICKY TABS</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-6 menu__item">
+                                                        <ul>
+                                                            <li class="pt-0"><label>PRODUCT LAYOUT</label></li>
+                                                            <li><a href="#">DEFAULT LAYOUT</a></li>
+                                                            <li><a href="#">EXTENDED LAYOUT
+                                                                    <span class="label--new">NEW</span>
+                                                                </a></li>
+                                                            <li><a href="#">FULL WIDTH LAYOUT
+                                                                    <span class="label--new">NEW</span>
+                                                                </a></li>
+                                                            <li><a href="#">GRID IMAGES LAYOUT
+                                                                    <span class="label--new">NEW</span>
+                                                                </a></li>
+                                                            <li><a href="#">STICKY RIGHT SIDE INFO
+                                                                    <span class="label--new">NEW</span>
+                                                                </a></li>
+                                                            <li><a href="#">VERTICAL LAYOUT
+                                                                    <span class="label--new">NEW</span>
+                                                                </a></li>
+                                                            <li><a href="#">WITH SIDEBAR</a></li>
+                                                            <li><a href="#">WITHOUT SIDEBAR</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 p-0">
+                                                <div class="sub__menu__img img__product">
+                                                    <img src="" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item sub__menu"><a href="#" class="nav-link">PAGES <i
+                                        class="fa-solid fa-chevron-down"></i></a>
+                                    <div class="sub__menu--open menu--small">
+                                        <div class="container">
+                                            <div class="row">
+                                                <ul>
+                                                    <li class="li__menu__item"><a href="#">ABOUT US</a></li>
+                                                    <li class="li__menu__item"><a href="#">CONTACT US</a></li>
+                                                    <li class="li__menu__item"><a href="#">BLOG</a></li>
+                                                    <li class="li__menu__item"><a href="#">POST</a></li>
+                                                    <li class="li__menu__item"><a href="#">SHOPPING CART</a></li>
+                                                    <li class="li__menu__item"><a href="#">CHECKOUT</a></li>
+                                                    <li class="li__menu__item"><a href="#">MY ACCOUNT</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </li>
+                            <li class="nav-item sub__menu"><a href="#" class="nav-link">FEATURES <i
+                                        class="fa-solid fa-chevron-down"></i></a>
+                                        <div class="sub__menu--open menu--small">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <ul>
+                                                        <li class="li__menu__item"><a href="#">HEADER TYPES</a></li>
+                                                        <li class="li__menu__item"><a href="#">FOOTER TYPES</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                            <li class="nav-item"><a href="#" class="nav-link">BLOG</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">ABOUT US</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">BUY PORTO!</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
 
     <!-- CAROUSEL -->
     <section class="carousel"></section>

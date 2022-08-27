@@ -10,4 +10,14 @@
     line-height: $lh;
 }
 
+@mixin styleFormSearch($bgc, $bd, $py, $px) {
+    background-color: $bgc;
+    border: $bd;
+    padding: $py $px;
+}
 
+@mixin styleFlexDisplay($jc, $align) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $align;
+}
