@@ -21,3 +21,9 @@
     justify-content: $jc;
     align-items: $align;
 }
+
+@mixin styleButton($bg-color, $bd, $py, $px){
+    background-color: $bg-color;
+    border: $bd;
+    padding: $py $px;
+}

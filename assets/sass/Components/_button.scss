@@ -1,0 +1,6 @@
+.ms--btn {
+    @include styleButton($color-dark-1, 1px solid $color-dark-1, 1.1em, 3em);
+    @include textStyle($color-white-1, $fs-rem-2, $fw-600 + 100);
+    text-transform: uppercase;
+    line-height: 1.3;
+}

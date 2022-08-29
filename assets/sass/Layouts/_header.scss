@@ -256,6 +256,8 @@ header {
             }
 
             .sub__menu--open {
+                z-index: 999;
+                background-color: $color-white-1;
                 display: none;
                 position: absolute;
                 width: 650px;
@@ -320,17 +322,18 @@ header {
                 }
 
                 .img__product {
-                    background-image: url("../img/shop1_megamenu.jpg");background-position: -3px center;
+                    background-image: url("../img/shop1_megamenu.jpg");
+                    background-position: -3px center;
                 }
             }
 
-            .li__menu__item{
+            .li__menu__item {
                 display: block;
             }
 
-            .menu--small{
+            .menu--small {
                 width: 230px;
-                a{
+                a {
                     @include textStyle($color-grey-1, $fs-2, $fw-600);
                     line-height: $lh-0 - 1;
                     padding: $pd-1 - 2 $pd-2;

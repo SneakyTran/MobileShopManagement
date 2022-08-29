@@ -35,6 +35,46 @@ a:hover {
   padding: 0 10px;
 }
 
+/* ------------------------------- NAV-SLIDER ------------------------------- */
+#msCarousel {
+  position: relative;
+}
+#msCarousel .owl-carousel .owl-prev,
+#msCarousel .owl-carousel .owl-next {
+  transition: all 0.5s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#msCarousel .owl-carousel .owl-prev span,
+#msCarousel .owl-carousel .owl-next span {
+  color: #333;
+  font-size: 30px;
+}
+#msCarousel .owl-prev {
+  left: 15px;
+}
+#msCarousel .owl-next {
+  right: 15px;
+}
+#msCarousel:hover .owl-carousel .owl-prev {
+  left: 25px;
+}
+#msCarousel:hover .owl-carousel .owl-next {
+  right: 30px;
+}
+
+.ms--btn {
+  background-color: #222529;
+  border: 1px solid #222529;
+  padding: 1.1em 3em;
+  color: #ffffff;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
 header .header__top {
   font-size: 14px;
 }
@@ -271,6 +311,8 @@ header .mbs__navbar .nav-item .sub__menu {
   position: relative;
 }
 header .mbs__navbar .nav-item .sub__menu--open {
+  z-index: 999;
+  background-color: #ffffff;
   display: none;
   position: absolute;
   width: 650px;
@@ -354,4 +396,113 @@ header .mbs__navbar .nav-link {
   font-size: 12px;
   font-weight: 700;
   transition: all 0.3s ease;
+}
+
+.carousel {
+  background-color: #f4f4f4;
+}
+.carousel .carousel__item {
+  position: relative;
+}
+.carousel .carousel__item .carousel__head,
+.carousel .carousel__item .carousel__drone {
+  position: absolute;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.carousel .carousel__item .carousel__head {
+  right: 6%;
+}
+.carousel .carousel__item .carousel__drone {
+  left: 8%;
+}
+.carousel .carousel__item .carousel__content {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.carousel .carousel__item .carousel__content h4 {
+  color: rgba(34, 37, 41, 0.7);
+  font-size: 1.1875em;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: capitalize;
+}
+.carousel .carousel__item .carousel__content h2 {
+  color: #222529;
+  font-size: 2.5em;
+  font-weight: 500;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.09em;
+}
+.carousel .carousel__item .carousel__content h3 {
+  color: #222529;
+  font-size: 5.875em;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.carousel .carousel__item .carousel__content .carousel__shop {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.carousel .carousel__item .carousel__content .carousel__shop h5 {
+  color: #222529;
+  font-size: 0.875em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.carousel .carousel__item .carousel__content .carousel__shop h4 {
+  color: #ffffff;
+  font-size: 1.8em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transform: rotate(-2deg);
+  padding: 4px 8px;
+  background-color: #ff7272;
+  position: relative;
+  top: -0.2em;
+}
+.carousel .carousel__item .carousel__content .carousel__shop h4 span {
+  position: relative;
+  top: -0.5em;
+  font-size: 50%;
+}
+.carousel .carousel__item .carousel__drone h4 {
+  color: #999999;
+  font-size: 2.125em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: normal;
+}
+.carousel .carousel__item .carousel__drone h3 {
+  color: #222529;
+  font-size: 4.3125em;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+.carousel .carousel__item .carousel__drone h2 {
+  color: #222529;
+  font-size: 2.125em;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: normal;
+}
+.carousel .carousel__item .carousel__drone h4:last-of-type {
+  color: #222529;
+  font-size: 2.125em;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  font-family: "Oswald", sans-serif;
+}
+.carousel .carousel__item .carousel__drone .ms--btn {
+  padding: 1.25em 3.125em;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.42857;
+  letter-spacing: 0.12em;
 }/*# sourceMappingURL=main.css.map */

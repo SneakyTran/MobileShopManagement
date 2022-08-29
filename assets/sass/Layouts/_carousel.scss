@@ -1,0 +1,118 @@
+.carousel {
+    background-color: $color-white-2;
+
+    .carousel__item {
+        position: relative;
+
+        .carousel__head,
+        .carousel__drone {
+            position: absolute;
+            height: auto;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+        .carousel__head {
+            right: 6%;
+        }
+
+        .carousel__drone {
+            left: 8%;
+        }
+
+        .carousel__content {
+            font-family: "Poppins", sans-serif;
+            text-transform: uppercase;
+            line-height: 1;
+
+            h4 {
+                @include textStyle(
+                    rgba(34, 37, 41, 0.7),
+                    $fs-em-4,
+                    $fw-600 - 100
+                );
+                letter-spacing: 0.08em;
+                text-transform: capitalize;
+            }
+
+            h2 {
+                @include textStyle($color-dark-1, $fs-em-7, $fw-600 - 100);
+                font-family: "Oswald", sans-serif;
+                letter-spacing: 0.09em;
+            }
+
+            h3 {
+                @include textStyle($color-dark-1, $fs-em-8, $fw-600 + 100);
+                line-height: 1.1;
+            }
+
+            .carousel__shop {
+                @include styleFlexDisplay(flex-start, flex-start);
+                h5 {
+                    @include textStyle(
+                        $color-dark-1,
+                        $fs-em-2 - 0.025,
+                        $fw-600 + 100
+                    );
+                    letter-spacing: 0.02em;
+                }
+
+                h4 {
+                    @include textStyle(
+                        $color-white-1,
+                        $fs-em-7 - 0.7,
+                        $fw-600 + 100
+                    );
+                    letter-spacing: 0.02em;
+                    transform: rotate(-2deg);
+                    padding: 4px 8px;
+                    background-color: $color-orange;
+                    position: relative;
+                    top: -0.2em;
+
+                    span {
+                        position: relative;
+                        top: -0.5em;
+                        font-size: 50%;
+                    }
+                }
+            }
+        }
+
+        .carousel__drone {
+            h4 {
+                @include textStyle(#999999, $fs-em-9, $fw-400 + 100);
+                text-transform: uppercase;
+                letter-spacing: normal;
+            }
+
+            h3 {
+                @include textStyle($color-dark-1, 4.3125em, $fw-600 + 100);
+                letter-spacing: normal;
+            }
+
+            h2 {
+                @include textStyle($color-dark-1, $fs-em-9, $fw-600 + 100);
+                font-family: "Poppins", sans-serif;
+                letter-spacing: normal;
+            }
+
+            h4{
+                &:last-of-type{
+                    @include textStyle($color-dark-1, $fs-em-9, $fw-400 + 100);
+                    line-height: 1.2;
+                    letter-spacing: .12em;
+                    font-family: 'Oswald', sans-serif;
+                }
+
+            }
+
+            .ms--btn{
+                padding: 1.25em 3.125em;
+                @include textStyle($color-white-1, $fs-rem-3, $fw-600 + 100);
+                line-height: 1.42857;
+                letter-spacing: .12em;
+            }
+        }
+    }
+}

@@ -10,7 +10,8 @@
     <!-- GOOGLE FONT CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
 
     <!-- FONT AWESOME CSS -->
@@ -221,35 +222,35 @@
                             </li>
                             <li class="nav-item sub__menu"><a href="#" class="nav-link">PAGES <i
                                         class="fa-solid fa-chevron-down"></i></a>
-                                    <div class="sub__menu--open menu--small">
-                                        <div class="container">
-                                            <div class="row">
-                                                <ul>
-                                                    <li class="li__menu__item"><a href="#">ABOUT US</a></li>
-                                                    <li class="li__menu__item"><a href="#">CONTACT US</a></li>
-                                                    <li class="li__menu__item"><a href="#">BLOG</a></li>
-                                                    <li class="li__menu__item"><a href="#">POST</a></li>
-                                                    <li class="li__menu__item"><a href="#">SHOPPING CART</a></li>
-                                                    <li class="li__menu__item"><a href="#">CHECKOUT</a></li>
-                                                    <li class="li__menu__item"><a href="#">MY ACCOUNT</a></li>
-                                                </ul>
-                                            </div>
+                                <div class="sub__menu--open menu--small">
+                                    <div class="container">
+                                        <div class="row">
+                                            <ul>
+                                                <li class="li__menu__item"><a href="#">ABOUT US</a></li>
+                                                <li class="li__menu__item"><a href="#">CONTACT US</a></li>
+                                                <li class="li__menu__item"><a href="#">BLOG</a></li>
+                                                <li class="li__menu__item"><a href="#">POST</a></li>
+                                                <li class="li__menu__item"><a href="#">SHOPPING CART</a></li>
+                                                <li class="li__menu__item"><a href="#">CHECKOUT</a></li>
+                                                <li class="li__menu__item"><a href="#">MY ACCOUNT</a></li>
+                                            </ul>
                                         </div>
                                     </div>
-                                    </li>
+                                </div>
+                            </li>
                             <li class="nav-item sub__menu"><a href="#" class="nav-link">FEATURES <i
                                         class="fa-solid fa-chevron-down"></i></a>
-                                        <div class="sub__menu--open menu--small">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <ul>
-                                                        <li class="li__menu__item"><a href="#">HEADER TYPES</a></li>
-                                                        <li class="li__menu__item"><a href="#">FOOTER TYPES</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                <div class="sub__menu--open menu--small">
+                                    <div class="container">
+                                        <div class="row">
+                                            <ul>
+                                                <li class="li__menu__item"><a href="#">HEADER TYPES</a></li>
+                                                <li class="li__menu__item"><a href="#">FOOTER TYPES</a></li>
+                                            </ul>
                                         </div>
-                                    </li>
+                                    </div>
+                                </div>
+                            </li>
                             <li class="nav-item"><a href="#" class="nav-link">BLOG</a></li>
                             <li class="nav-item"><a href="#" class="nav-link">ABOUT US</a></li>
                             <li class="nav-item"><a href="#" class="nav-link">BUY PORTO!</a></li>
@@ -261,7 +262,47 @@
     </header>
 
     <!-- CAROUSEL -->
-    <section class="carousel"></section>
+    <section class="carousel" id="msCarousel">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="container">
+                    <div class="carousel__item">
+                        <div class="carousel__img">
+                            <img src="../../assets/img/shop14_home_slider1.jpg" alt="">
+                        </div>
+                        <div class="carousel__content carousel__head">
+                            <h4>totally wireless high-performance</h4>
+                            <h2>select headphones</h2>
+                            <h3>30% off</h3>
+                            <div class="carousel__shop">
+                                <h5 class="mr-3">starting at</h5>
+                                <h4 class="mr-2">
+                                    <span>$</span>199<span>99</span>
+                                </h4>
+                                <button class="ms--btn">shop now!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="container">
+                    <div class="carousel__item">
+                        <div class="carousel__content carousel__drone">
+                            <h4 class="mb-0">extra</h4>
+                            <h3 class="mb-2">20% off</h3>
+                            <h2>- accessories -</h2>
+                            <h4 class="mb-4">drones on sale</h4>
+                            <button class="ms--btn w-100">shop all sale</button>
+                        </div>
+                        <div class="carousel__img">
+                            <img src="../../assets/img/shop14_home_slider2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- SUPPORT -->
     <section class="support"></section>
@@ -303,6 +344,19 @@
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+            }
+        })
+    </script>
 </body>
 
 </html>
