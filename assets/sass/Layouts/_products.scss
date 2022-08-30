@@ -1,0 +1,159 @@
+.products {
+    padding-top: 80px;
+    position: relative;
+
+    .product__item {
+        &:hover {
+            .product__img::after {
+                padding: 0.45rem 0;
+                opacity: 0.85;
+                visibility: visible;
+            }
+
+            .product__add__cart button {
+                background-color: $color-green-2;
+                span,
+                i {
+                    color: $color-white-1;
+                }
+            }
+        }
+    }
+
+    .product__img {
+        position: relative;
+        margin-bottom: 1rem;
+        &::after {
+            content: "QUICK VIEW";
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            cursor: pointer;
+            @include styleButton(
+                $color-green-2,
+                1px solid $color-green-2,
+                0,
+                0
+            );
+
+            text-align: center;
+            @include textStyle($color-white-1, $fs-3, $fw-400);
+            line-height: 34px;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+    }
+
+    .products_nav {
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background-color: #e7e7e7;
+        }
+
+        .navbar {
+            padding: 0;
+        }
+
+        .nav-link {
+            @include textStyle($color-dark-1, $fs-rem-1, $fw-600 + 100);
+            font-family: "Poppins", sans-serif;
+            letter-spacing: 0;
+            padding: 10px 0;
+            margin-right: 31px;
+
+            &.active {
+                color: $color-green-2;
+                border-bottom: 2px solid $color-green-2;
+            }
+
+            &:hover {
+                color: $color-green-2;
+                border-bottom: 2px solid $color-green-2;
+            }
+        }
+    }
+
+    #owl--product {
+        padding: 30px 0 15px;
+    }
+
+    .product__content {
+        text-align: center;
+        a {
+            @include textStyle($color-dark-1, $fs-rem-2, $fw-400);
+            line-height: 1.35;
+            letter-spacing: 0.01em;
+            margin-bottom: 0.45rem;
+            &:first-child:hover {
+                color: $color-green-2;
+            }
+        }
+        .product__rating i {
+            @include textStyle(rgba(0, 0, 0, 0.16), $fs-1, $fw-600);
+            display: inline-block;
+        }
+
+        span.price {
+            @include textStyle($color-dark-5, $fs-rem-4, $fw-600);
+            line-height: 1;
+            display: block;
+            margin-top: 0.625rem;
+            margin-bottom: 1rem;
+        }
+
+        .product__add__cart {
+            @include styleFlexDisplay(center, center);
+            gap: 10px;
+            .qty__box {
+                @include styleFlexDisplay(center, left);
+                a {
+                    display: inline-block;
+                    width: 2em;
+                    padding-top: 9px;
+                    margin: 0;
+                    border: 1px solid rgba(0, 0, 0, 0.09);
+
+                    font-size: $fs-6;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        color: $color-green-2;
+                    }
+                }
+
+                input {
+                    width: 2.5em;
+                    display: inline-block;
+                    padding: 8px 0;
+                    border-color: rgba(0, 0, 0, 0.09);
+
+                    @include textStyle(
+                        $color-dark-1,
+                        $fs-rem-1 - 0.025,
+                        $fw-400
+                    );
+                    font-family: "Poppins", sans-serif;
+                    text-align: center;
+                    line-height: 1.42857;
+                }
+            }
+
+            button {
+                @include styleButton(
+                    $color-white-2,
+                    1px solid #ddd,
+                    0,
+                    0.625rem
+                );
+                @include textStyle($color-dark-7, $fs-rem-0, $fw-600);
+                text-transform: uppercase;
+                line-height: 34px;
+            }
+        }
+    }
+}

@@ -15,9 +15,11 @@
             font-size: 30px;
         }
     }
+}
 
+#msCarousel {
     .owl-prev {
-        left: 15px;
+        left: 0;
     }
 
     .owl-next {
@@ -31,6 +33,43 @@
 
         .owl-carousel .owl-next {
             right: 30px;
+        }
+    }
+}
+
+#msProduct {
+    position: relative;
+    .owl-carousel .owl-prev,
+    .owl-carousel .owl-next {
+        transition: all 0.5s ease;
+
+        position: absolute;
+        top: calc(50% - 129px / 2);
+        transform: translateY(-50%);
+
+        span {
+            color: $color-dark-7;
+            font-size: 30px;
+        }
+    }
+}
+
+#msProduct {
+    .owl-prev {
+        left: -50px;
+    }
+
+    .owl-next {
+        right: -50px;
+    }
+
+    &:hover {
+        .owl-carousel .owl-prev {
+            left: -40px;
+        }
+
+        .owl-carousel .owl-next {
+            right: -40px;
         }
     }
 }
