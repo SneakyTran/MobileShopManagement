@@ -1,40 +1,38 @@
-function ProductService() {
-    this.productList = [];
-
-    this.getProductList = function () {
+export default class ProductService {
+    getProductList() {
         return axios({
             method: "GET",
-            url: "https://62e74ea669bd03090f7b1c73.mockapi.io/Products",
+            url: "https://62e74ea669bd03090f7b1c73.mockapi.io/Phones",
         });
-    };
+    }
 
-    this.addProduct = function (product) {
+    addProduct(product) {
         return axios({
             method: "POST",
-            url: "https://62e74ea669bd03090f7b1c73.mockapi.io/Products",
+            url: "https://62e74ea669bd03090f7b1c73.mockapi.io/Phones",
             data: product,
         });
-    };
+    }
 
-    this.updateProduct = function (product, id) {
+    updateProduct(product, id) {
         return axios({
             method: "PUT",
-            url: `https://62e74ea669bd03090f7b1c73.mockapi.io/Products/${id}`,
+            url: `https://62e74ea669bd03090f7b1c73.mockapi.io/Phones/${id}`,
             data: product,
         });
-    };
+    }
 
-    this.deleteProduct = function (id) {
+    deleteProduct(id) {
         return axios({
             method: "DELETE",
-            url: `https://62e74ea669bd03090f7b1c73.mockapi.io/Products/${id}`,
+            url: `https://62e74ea669bd03090f7b1c73.mockapi.io/Phones/${id}`,
         });
-    };
+    }
 
-    this.getProductById = function (id) {
+    getProductById(id) {
         return axios({
             method: "GET",
-            url: `https://62e74ea669bd03090f7b1c73.mockapi.io/Products/${id}`,
+            url: `https://62e74ea669bd03090f7b1c73.mockapi.io/Phones/${id}`,
         });
-    };
+    }
 }

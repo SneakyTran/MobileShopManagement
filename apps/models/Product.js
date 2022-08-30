@@ -1,14 +1,5 @@
-function Product(
-    name,
-    price,
-    screen,
-    backCamera,
-    frontCamera,
-    img,
-    desc,
-    type
-) {
-    {
+export default class Product {
+    constructor(name, price, screen, backCamera, frontCamera, img, desc, type) {
         this.name = name;
         this.price = price;
         this.screen = screen;
@@ -18,4 +9,5 @@ function Product(
         this.desc = desc;
         this.type = type;
     }
+    
 }
