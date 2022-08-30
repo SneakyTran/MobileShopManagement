@@ -67,7 +67,7 @@ input:focus {
 }
 
 #msCarousel .owl-prev {
-  left: 0;
+  left: 15px;
 }
 #msCarousel .owl-next {
   right: 15px;
