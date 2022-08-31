@@ -120,9 +120,30 @@ let removeActiveNav = () => {
         .classList.remove("active");
 };
 
+let showCart = () => {
+    document.querySelector("#cart--menu").classList.add("cart--wrap");
+};
+
 /* ------------------------- WINDOW CONFIG FUNCTION ------------------------- */
 window.getProductList = getProductList;
 window.getListType = getListType;
 
 /* ------------------------------ CALL FUNCTION ----------------------------- */
 getProductList();
+
+/* ----------------------------- EVENT LISTENER ----------------------------- */
+let flagWrapCart = 0;
+document.querySelector(".mini--cart").onclick = showCart;
+document.addEventListener("click", (e) => {
+    const closestEle = e.target.closest(".cart--block");
+    const cartWrapEle = document.querySelector(".cart--wrap");
+    if (!!cartWrapEle) {
+        flagWrapCart++;
+        if (flagWrapCart > 1 && !closestEle) {
+            document
+                .querySelector(".cart--wrap")
+                .classList.remove("cart--wrap");
+            flagWrapCart = 0;
+        }
+    }
+});

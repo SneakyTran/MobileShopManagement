@@ -173,6 +173,7 @@ header {
                 }
             }
             .mini--cart {
+                position: relative;
                 @include styleFlexDisplay(center, center);
                 cursor: pointer;
                 .lni-cart {
@@ -198,6 +199,144 @@ header {
                     font-size: $fs-4;
                     line-height: 14px;
                     padding-left: 5px;
+                }
+                .cart--block {
+                    display: none;
+                    z-index: 9999;
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                    padding: $px-py-9;
+                    margin-top: 13px;
+                    @include textStyle(
+                        $color-dark-1,
+                        $fs-rem-4 - 0.3,
+                        $fw-600 + 100
+                    );
+
+                    background-color: $color-white-1;
+                    box-shadow: 0 5px 8px rgb(0 0 0 / 15%);
+
+                    .total--count {
+                        @include styleFlexDisplay(space-between, center);
+                        border-bottom: 1px solid #e7e7e7;
+                        padding: $pd-2 - 3 $pd-1;
+
+                        .item--total {
+                            cursor: auto;
+                        }
+
+                        a {
+                            @include textStyle(
+                                $color-dark-1,
+                                $fs-rem-4 - 0.3,
+                                $fw-600 + 100
+                            );
+                        }
+                    }
+
+                    .cart__item {
+                        @include styleFlexDisplay(space-between, center);
+                        gap: 15px;
+                        padding: $pd-2 $pd-1;
+                        border-bottom: 1px solid #e7e7e7;
+                        .item__content {
+                            a {
+                                display: block;
+                                @include textStyle(
+                                    $color-dark-1,
+                                    $fs-rem-4 - 0.3,
+                                    $fw-600 + 100
+                                );
+                                font-family: "Poppins", sans-serif;
+
+                                margin-bottom: 0.5rem;
+                            }
+                            span,
+                            .qty {
+                                @include textStyle(
+                                    $color-dark-6,
+                                    $fs-rem-4 - 0.3,
+                                    $fw-400
+                                );
+                            }
+                            .qty {
+                                @include styleFlexDisplay(flex-start, center);
+                                gap: 10px;
+                                label {
+                                    margin: 0;
+                                }
+                                .qty__box {
+                                    text-align: center;
+                                    a {
+                                        margin: 0;
+                                        padding-top: 2px;
+                                    }
+                                    input {
+                                        padding: 0;
+                                        line-height: 1;
+                                    }
+                                }
+                            }
+                        }
+                        .item__img {
+                            position: relative;
+                            width: 100px;
+                            i {
+                                position: absolute;
+                                right: -5px;
+                                top: -5px;
+
+                                display: inline-block;
+                                width: 20px;
+                                height: 20px;
+                                line-height: 20px;
+                                text-align: center;
+
+                                border: 1px solid transparent;
+                                background-color: $color-white-1;
+                                border-radius: 50%;
+                                box-shadow: 0 2px 6px 0 rgb(0 0 0 / 40%);
+
+                                @include textStyle(
+                                    $color-dark-1,
+                                    $fs-1,
+                                    $fw-600
+                                );
+                            }
+                        }
+                    }
+                    .cart__total {
+                        @include styleFlexDisplay(space-between, center);
+                        padding: $pd-1 $pd-2 $pd-2 + 10;
+                        @include textStyle($color-dark-1, $fs-4, $fw-600 + 100);
+                        span:last-child {
+                            font-size: $fs-6;
+                        }
+                    }
+                    .cart--checkout {
+                        padding: 0 $pd-1 $pd-1;
+                        margin-bottom: 10px;
+                        button {
+                            width: 100%;
+                            @include styleButton(
+                                $color-dark-1,
+                                none,
+                                0.875rem,
+                                1.5rem
+                            );
+                            border-radius: 2px;
+                            @include textStyle(
+                                $color-white-1,
+                                $fs-rem-0,
+                                $fw-600
+                            );
+                            letter-spacing: 0.025em;
+                        }
+                    }
+                }
+                & .cart--wrap {
+                    display: block;
                 }
             }
         }

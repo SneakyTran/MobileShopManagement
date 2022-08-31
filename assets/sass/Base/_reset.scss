@@ -48,3 +48,37 @@ input[type="number"] {
 input:focus {
     outline: none;
 }
+
+.qty__box {
+    @include styleFlexDisplay(center, left);
+    a {
+        display: inline-block;
+        width: 2em;
+        padding-top: 9px;
+        margin: 0;
+        border: 1px solid rgba(0, 0, 0, 0.09);
+
+        font-size: $fs-6;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: $color-green-2;
+        }
+    }
+
+    input {
+        width: 2.5em;
+        display: inline-block;
+        padding: 8px 0;
+        border-color: rgba(0, 0, 0, 0.09);
+
+        @include textStyle(
+            $color-dark-1,
+            $fs-rem-1 - 0.025,
+            $fw-400
+        );
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        line-height: 1.42857;
+    }
+}
