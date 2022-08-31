@@ -4,6 +4,12 @@ import ProductService from "../services/ProductServices.js";
 const prodServices = new ProductService();
 let products = [];
 
+/**
+ * Author: Sneaky
+ * Date Created: 30/8/2022
+ * display product to UI
+ * @param {*} prodList
+ */
 let loadProduct = (prodList) => {
     let content = "";
     prodList.map((item) => {
@@ -48,6 +54,12 @@ let loadProduct = (prodList) => {
     refreshOwl();
 };
 
+/**
+ * Author: Sneaky
+ * Date Created: 30/8/2022
+ * Filter product by type (ex: samsung/iphone)
+ * @param {String} type
+ */
 let getListType = (type) => {
     const filterProd = products.filter((item) => {
         return item.type.toLowerCase() === type;
@@ -56,8 +68,13 @@ let getListType = (type) => {
     removeActiveNav();
     document.querySelector(`#msProduct .${type}`).classList.add("active");
 };
-window.getListType = getListType;
 
+/**
+ * Author: Sneaky
+ * Date Created: 30/8/2022
+ * Filter product by type (ex: samsung/iphone)
+ * Reset slider of products
+ */
 let refreshOwl = () => {
     $("#owl--product").owlCarousel("destroy");
     $("#owl--product").owlCarousel({
@@ -69,10 +86,18 @@ let refreshOwl = () => {
     });
 };
 
+/**
+ * Author: Sneaky
+ * Date Created: 30/8/2022
+ * Get product data from API
+ * @param {*} item
+ */
 let getProductList = (item) => {
     if (item === "all") {
         removeActiveNav();
-        document.querySelector(`#msProduct .nav-link.${item}`).classList.add("active");
+        document
+            .querySelector(`#msProduct .nav-link.${item}`)
+            .classList.add("active");
     }
     prodServices
         .getProductList()
@@ -83,11 +108,21 @@ let getProductList = (item) => {
             console.log(err);
         });
 };
-window.getProductList = getProductList;
-getProductList();
 
+/**
+ * Author: Sneaky
+ * Date Created: 30/8/2022
+ * UI_product => change active nav
+ */
 let removeActiveNav = () => {
     document
         .querySelector("#msProduct .nav-link.active")
         .classList.remove("active");
 };
+
+/* ------------------------- WINDOW CONFIG FUNCTION ------------------------- */
+window.getProductList = getProductList;
+window.getListType = getListType;
+
+/* ------------------------------ CALL FUNCTION ----------------------------- */
+getProductList();
