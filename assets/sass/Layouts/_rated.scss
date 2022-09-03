@@ -1,0 +1,121 @@
+#product{
+    padding-top: 30px;
+    padding-bottom: 50px;
+
+    .porto-product{
+        margin-bottom: 35px;
+
+        .product-title {
+            font-size: 1.1429em;
+            line-height: 1.4;
+            letter-spacing: normal;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 0;
+            margin-bottom: 1.25rem;
+            position: relative;
+            color: $color-black-1;
+            
+            .line {
+                display: block;
+                height: 1px;
+                position: relative;
+                bottom: 0.65em;
+                width: 0;
+            }
+        }
+       
+       .product-list{
+        .product-photo{
+            max-width: 50%;
+            padding-right: 15px;
+            margin: 0;
+
+            a{
+                display: block;
+                position: relative;
+                text-decoration: none;
+                font-size: 1.2857em;
+                font-weight: 600;
+                line-height: 1.35;
+                letter-spacing: -0.01em;
+                margin-bottom: 0.45rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: #222529;
+            
+            .product-item-link:hover{
+                color: $color-green-1;
+            }
+                
+
+                .photo{
+                    display: block;
+                    position: relative;
+                    z-index: 1;
+                    top: 0;
+                    left: 0;
+                    margin: auto;
+                    height: auto;
+                    width: 100%;
+                }
+            }
+
+        }
+
+        .product-detail{
+            position: relative;
+            max-width: 50%;
+            padding-bottom: 1px;
+            text-align: left;
+
+            .product-item_name{
+                font-size: 1em;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: block;
+                font-weight: 700;
+
+                a {
+                    font-size: 1.2857em;
+                    font-weight: 600;
+                    line-height: 1.35;
+                    letter-spacing: -.01em;
+                    margin-bottom: 0.45rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    color: #222529;
+                    display: block;
+                }
+            }
+
+            .product-review{
+                .raiting-result{
+                    i{
+                        color: rgba(0, 0, 0, 0.16);
+                        font-size: 11px;
+                        font-weight: 600;
+                        display: inline-block;
+                    }
+                }
+            }
+
+            .product-price{
+                .price{
+                    color: #444444;
+                    font-size: 1.125rem;
+                    font-weight: 600;
+                    line-height: 1;
+                    display: block;
+                    margin-top: 0.625rem;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+        
+    }
+}
