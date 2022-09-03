@@ -181,7 +181,7 @@ header {
                     @include textStyle($color-dark-1, $fs-8, inherit);
                     line-height: 25px;
                     &::after {
-                        content: "0";
+                        content: attr(total--item);
                         position: absolute;
                         width: 16px;
                         height: 16px;
@@ -282,10 +282,11 @@ header {
                         .item__img {
                             position: relative;
                             width: 100px;
+                            padding-top: 8px;
                             i {
                                 position: absolute;
-                                right: -5px;
-                                top: -5px;
+                                right: 0;
+                                top: -3px;
 
                                 display: inline-block;
                                 width: 20px;
@@ -318,6 +319,7 @@ header {
                         padding: 0 $pd-1 $pd-1;
                         margin-bottom: 10px;
                         button {
+                            white-space: nowrap;
                             width: 100%;
                             @include styleButton(
                                 $color-dark-1,
@@ -343,6 +345,7 @@ header {
     }
 
     .mbs__navbar {
+        position: inherit;
         .navbar-expand-lg .navbar-collapse {
             justify-content: center;
         }
