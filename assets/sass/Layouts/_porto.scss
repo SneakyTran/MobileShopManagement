@@ -1,0 +1,15 @@
+.porto{
+    margin: 30px 0;
+    .owl-carousel {
+        position: relative;
+        overflow: hidden;
+        transform: translate3d(0px, 0px, 0px);
+        transition: all 0s ease 0s;
+        width: 1181px;
+
+        img {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+}

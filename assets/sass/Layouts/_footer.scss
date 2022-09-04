@@ -1,0 +1,165 @@
+footer{
+    .footer{
+        letter-spacing: 0;
+        font-size: 13px;
+        line-height: 22px;
+
+        .footer-mid{
+            color: #a8a8a8;
+            background-color: #222529;
+              
+            .inset{
+                margin: 85px 0;
+            }
+            a {
+                color: #a8a8a8;
+            }
+
+            .footer-info{
+                margin-top: 0;
+                margin-bottom: 15px;
+                .mid-title{
+                    color: #fff;
+                    font-size: 15px;
+                    font-weight: 700;
+                }
+
+                .contact-info{
+                    .footer-detail{
+                        list-style: none;
+                        
+                        li{
+                            border-width: 0;
+                            margin: 0;
+                            padding: 0;
+
+                            i{
+                                display: none;
+                                clear: both;
+                                float: left;
+                                text-align: center;
+                                width: 16px;
+                                top: -2px;
+                                margin: 4px 9px 10px 0;
+                                font-size: 1.3em;
+                            }
+
+                            strong{
+                                padding-left: 0;
+                                display: block;
+                                line-height: 1em;
+                                color: #fff;
+                                font-weight: 400;
+                            }
+
+                            span{
+                                display: block;
+                                padding-left: 0;
+                            }
+                        }
+                        li:not(:last-child){
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
+
+            .footer-us{
+                margin-top: 0;
+
+                .share-links {
+                    vertical-align: middle;
+
+                    a {
+                        height: 32px;
+                        width: 32px;
+                        line-height: 32px;
+                        text-align: center;
+                        display: inline-block;
+                        border-radius: 50px;
+                        font-size: 14px;
+                        color: #fff;
+                        background-color: rgba(255,255,255,.1);
+                        transition: all .5s;
+                        margin: 2px 6px;
+                    }
+                     
+                    .fb:hover{
+                        background-color: $color-fb-hover;
+                    }
+
+                    .tw:hover{
+                        background-color: $color-fb-hover;
+                    }
+
+                    .in:hover{
+                        background-color: $color-fb-hover;
+                    }
+                }
+            }
+
+            .wiget{
+                .widget-title{
+                    color: #fff;
+                    font-weight: 700;
+                }
+
+                .m_content_element{
+                    form {
+                        display: flex;
+                        border-radius: 0.5rem;
+                        box-shadow: 0 0 60px 0 rgb(0 0 0 / 10%);
+
+                        input {
+                            padding: 12px 20px;
+                            font-size: 15px;
+                            font-weight: 400;
+                            color: #888;
+                            background: #fff;
+                            flex: 1 1 auto;
+                            border-radius: 0.5rem 0 0 0.5rem;
+                            border: 1px solid #fff;
+                            outline: 0;
+                            transition: all .5s;
+                        }
+
+                        button{
+                            height: 48px;
+                            padding-left: 25px;
+                            padding-right: 25px;
+                            text-transform: uppercase;
+                            font-weight: 700;
+                            font-size: .75rem;
+                            border-radius: 0 30px 30px 0;
+                            border: none;
+                            background-color: $color-green-2;
+                            color: #fff;
+                        }
+                    }
+                    li{
+
+                        padding: 11px;
+
+                        a:hover{
+                          color: #fff;
+                        }
+                    }
+                }
+
+                .vc_column-inner{
+                    .aus{
+                        padding: 0 39px;
+                    }
+                }
+            }
+        }
+
+        .footer-bot{
+            background-color: #222529;
+
+            .bottom-payment-icons{
+                margin: -20px 0;
+            }
+        }
+    }
+}
