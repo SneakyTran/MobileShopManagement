@@ -275,18 +275,44 @@ let loadProductDetail = (prod) => {
  */
 let changeQuantity = (type, e) => {
     let inputEle = null;
+    let indexChange = -1;
+    let totalPrice = 0;
+    let typeChangeVal = 1;
     if (!e.parentElement.parentElement.classList.contains("qty")) {
+        //product detail
         inputEle = document.querySelector(`#msProdDetail .qty__box input`);
     } else {
+        //cart
         inputEle = e.parentElement.querySelector("input");
+        indexChange = inputEle.getAttribute("name");
     }
+    //change quantity input
     if (type === "desc") {
         if (inputEle.value > 1) {
             inputEle.value -= 1;
         }
+        typeChangeVal = -1;
     } else {
         inputEle.value = Number(inputEle.value) + 1;
+        typeChangeVal = 1;
     }
+    //change total price of cart
+    if (indexChange == -1) {
+        return;
+    } else {
+        let totalEle = document.querySelector(".cart__total .total").innerHTML;
+        totalPrice = calcTotalPrice(
+            Number(totalEle.replace("$", "")),
+            Number(cartProdList[inputEle.getAttribute("name")].price),
+            typeChangeVal
+        );
+        document.querySelector(".cart__total .total").innerHTML =
+            "$" + totalPrice;
+    }
+};
+
+let calcTotalPrice = (total, amount, type) => {
+    return total + amount * type;
 };
 
 let cartProdList = [];
@@ -416,7 +442,7 @@ let loadCartProduct = () => {
                     </div>
         `;
 
-        cartProdList.map((item) => {
+        cartProdList.map((item, index) => {
             let { id, name, price, img, quantity } = item;
             cartBody += `
                         <div class="cart__item">
@@ -425,9 +451,9 @@ let loadCartProduct = () => {
                                 <span>$${price}</span>
                                 <div class="qty">
                                     <label>Quantity</label>
-                                    <div class="qty__box" name="${id}">
+                                    <div class="qty__box">
                                         <a onclick="changeQuantity('desc', this)">-</a>
-                                        <input type="number" value="${quantity}">
+                                        <input name=${index} type="number" value="${quantity}">
                                         <a onclick="changeQuantity('inc', this)">+</a>
                                     </div>
                                 </div>
@@ -444,7 +470,7 @@ let loadCartProduct = () => {
         cartBody += `
             <div class="cart__total">
                                 <span>SUBTOTAL:</span>
-                                <span>$${totalPrice}</span>
+                                <span class="total">$${totalPrice}</span>
                             </div>
                             <div class="cart--checkout">
                                 <button>GO TO CHECKOUT</button>
