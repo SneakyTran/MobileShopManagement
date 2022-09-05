@@ -1572,4 +1572,27 @@ header #adHead.header__content .header__left .top--nav--search button {
   color: #333;
   background-color: transparent;
   border-color: transparent;
+}
+
+.ad__content .ad__product__img {
+  width: 150px;
+}
+.ad__content .ad__product__img img {
+  width: 100%;
+}
+.ad__content .btn--action {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.ad__content .btn--action button {
+  margin-right: 0.5rem;
+}
+.ad__content #ad__product--id {
+  display: none;
+}
+.ad__content #popupModal .form-group span {
+  color: red;
+  padding-left: 5px;
+  padding-top: 5px;
 }/*# sourceMappingURL=main.css.map */

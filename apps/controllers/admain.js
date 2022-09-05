@@ -1,4 +1,5 @@
 import Product from "../models/Product.js";
+import Validation from "../models/Validation.js";
 import ProductService from "../services/ProductServices.js";
 
 const spServices = new ProductService();
@@ -57,9 +58,80 @@ let getList = () => {
 
 getList();
 
+let isValidInput = (
+    name,
+    price,
+    screen,
+    backCamera,
+    frontCamera,
+    img,
+    desc,
+    type
+) => {
+    let isValid = true;
+    const validation = new Validation();
+    //name
+    isValid &= validation.checkEmpty(
+        name,
+        "errName",
+        "Tên sản phẩm không được để trống"
+    );
+
+    //price
+    isValid &=
+        validation.checkEmpty(
+            price,
+            "errPrice",
+            "Giá sản phẩm không được để trống"
+        ) &&
+        validation.checkNumber(price, "errPrice", "Giá sản phẩm phải là số");
+
+    //screen
+    isValid &= validation.checkEmpty(
+        screen,
+        "errScreen",
+        "Loại màn hình không được để trống"
+    );
+
+    //backCamera
+    isValid &= validation.checkEmpty(
+        backCamera,
+        "errBCamera",
+        "loại camera không được để trống"
+    );
+
+    //frontCamera
+    isValid &= validation.checkEmpty(
+        frontCamera,
+        "errFCamera",
+        "Loại camera không được để trống"
+    );
+
+    //img
+    isValid &= validation.checkEmpty(
+        img,
+        "errImg",
+        "Hình ảnh sản phẩm không được để trống"
+    );
+
+    //desc
+    isValid &= validation.checkEmpty(
+        desc,
+        "errDesc",
+        "Mô tả sản phẩm không được để trống"
+    );
+
+    //type
+    isValid &= validation.checkEmpty(
+        type,
+        "errType",
+        "Loại sản phẩm không được để trống"
+    );
+};
+
 let addPhoneMain = () => {
     let phoneValue = {};
-    let formELE = document.querySelectorAll("#btnThemSPl .spPro");
+    let formELE = document.querySelectorAll("#popupModal .spPro");
     for (let i = 0; i < formELE.length; i++) {
         let { id, value } = formELE[i];
 
@@ -68,10 +140,26 @@ let addPhoneMain = () => {
         }
     }
 
-    let { id, name, price, screen, backCamera, frontCamera, img, desc, type } =
+    let { name, price, screen, backCamera, frontCamera, img, desc, type } =
         phoneValue;
+
+    //VALIDATION
+    if (
+        !isValidInput(
+            name,
+            price,
+            screen,
+            backCamera,
+            frontCamera,
+            img,
+            desc,
+            type
+        )
+    ) {
+        return;
+    }
+
     let product = new Product(
-        id,
         name,
         Number(price),
         screen,
@@ -85,6 +173,7 @@ let addPhoneMain = () => {
     spServices
         .addProduct(product)
         .then((result) => {
+            closeModal();
             getList();
         })
         .catch((error) => {
@@ -99,14 +188,17 @@ let getDetailMain = (id) => {
     spServices
         .getProductById(id)
         .then((result) => {
-            document.querySelector("#TenSP").value = result.data.name;
-            document.querySelector("#GiaSP").value = result.data.price;
-            document.querySelector("#manHinh").value = result.data.screen;
-            document.querySelector("#camera").value = result.data.backCamera;
-            document.querySelector("#camera2").value = result.data.frontCamera;
-            document.querySelector("#HinhSP").value = result.data.img;
-            document.querySelector("#motaSP").value = result.data.desc;
-            document.querySelector("#loaiSP").value = result.data.type;
+            document.querySelector("#ad__product--id").innerHTML = id;
+            document.querySelector("#name").value = result.data.name;
+            document.querySelector("#price").value = result.data.price;
+            document.querySelector("#screen").value = result.data.screen;
+            document.querySelector("#backCamera").value =
+                result.data.backCamera;
+            document.querySelector("#frontCamera").value =
+                result.data.frontCamera;
+            document.querySelector("#img").value = result.data.img;
+            document.querySelector("#desc").value = result.data.desc;
+            document.querySelector("#type").value = result.data.type;
         })
         .catch((error) => {
             console.log(error);
@@ -117,15 +209,31 @@ window.getDetailMain = getDetailMain;
 //update
 let updatePhoneMain = () => {
     let phoneValue = {};
-    let formELE = document.querySelectorAll("#btnThemSPl .spPro");
+    let formELE = document.querySelectorAll("#popupModal .spPro");
     for (let i = 0; i < formELE.length; i++) {
         let { id, value } = formELE[i];
         phoneValue = { ...phoneValue, [id]: value };
     }
-    let { id, name, price, screen, backCamera, frontCamera, img, desc, type } =
+    let { name, price, screen, backCamera, frontCamera, img, desc, type } =
         phoneValue;
+
+    //VALIDATION
+    if (
+        !isValidInput(
+            name,
+            price,
+            screen,
+            backCamera,
+            frontCamera,
+            img,
+            desc,
+            type
+        )
+    ) {
+        return;
+    }
+
     let product = new Product(
-        id,
         name,
         Number(price),
         screen,
@@ -135,10 +243,13 @@ let updatePhoneMain = () => {
         desc,
         type
     );
-
     spServices
-        .updateProduct(product, id)
+        .updateProduct(
+            product,
+            document.querySelector("#ad__product--id").innerHTML
+        )
         .then((result) => {
+            closeModal();
             getList();
         })
         .catch((error) => {
@@ -165,3 +276,7 @@ let resetForm = () => {
     document.querySelector("#popupModal").reset();
 };
 document.querySelector("#btnThemSP").onclick = resetForm;
+
+let closeModal = () => {
+    document.querySelector("#btnClose").click();
+};

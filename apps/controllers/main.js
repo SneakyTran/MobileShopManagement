@@ -150,7 +150,6 @@ let loadProductDetail = (prod) => {
     let { id, name, price, screen, backCamera, frontCamera, img, desc, type } =
         prod;
     product = new Product(
-        id,
         name,
         price,
         screen,
@@ -331,7 +330,6 @@ let addToCart = (idClick) => {
         return;
     } else {
         let {
-            id,
             name,
             price,
             screen,
@@ -344,8 +342,8 @@ let addToCart = (idClick) => {
         if (cartProdList.length == 0) {
             cartProdList.push(
                 new CartProduct(
+                    idClick,
                     Number(quantity),
-                    id,
                     name,
                     price,
                     screen,
@@ -365,8 +363,8 @@ let addToCart = (idClick) => {
             } else {
                 cartProdList.push(
                     new CartProduct(
+                        idClick,
                         Number(quantity),
-                        id,
                         name,
                         price,
                         screen,

@@ -1,0 +1,25 @@
+.ad__content {
+    .ad__product__img {
+        width: 150px;
+        img {
+            width: 100%;
+        }
+    }
+
+    .btn--action {
+        @include styleFlexDisplay(flex-start, center);
+        button {
+            margin-right: 0.5rem;
+        }
+    }
+
+    #ad__product--id {
+        display: none;
+    }
+
+    #popupModal .form-group span{
+        color: red;
+        padding-left: 5px;
+        padding-top: 5px;
+    }
+}
