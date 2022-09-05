@@ -127,6 +127,7 @@ let isValidInput = (
         "errType",
         "Loại sản phẩm không được để trống"
     );
+    return isValid;
 };
 
 let addPhoneMain = () => {
@@ -185,6 +186,7 @@ document.querySelector("#btnThemMon").onclick = addPhoneMain;
 
 //xem
 let getDetailMain = (id) => {
+    resetForm();
     spServices
         .getProductById(id)
         .then((result) => {
@@ -216,7 +218,6 @@ let updatePhoneMain = () => {
     }
     let { name, price, screen, backCamera, frontCamera, img, desc, type } =
         phoneValue;
-
     //VALIDATION
     if (
         !isValidInput(
@@ -243,6 +244,7 @@ let updatePhoneMain = () => {
         desc,
         type
     );
+
     spServices
         .updateProduct(
             product,
@@ -274,6 +276,10 @@ window.deletePhoneMain = deletePhoneMain;
 
 let resetForm = () => {
     document.querySelector("#popupModal").reset();
+    let listSpan = document.querySelectorAll("#popupModal .form-group span");
+    for (let i = 0; i < listSpan.length; i++) {
+        listSpan[i].style.display = "none";
+    }
 };
 document.querySelector("#btnThemSP").onclick = resetForm;
 

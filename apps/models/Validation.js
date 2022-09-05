@@ -3,9 +3,11 @@ export default class Validation {
         if (input === "") {
             document.querySelector("#" + spanId).innerHTML = message;
             document.querySelector("#" + spanId).style.display = "block";
+            return false;
         } else {
             document.querySelector("#" + spanId).innerHTML = "";
             document.querySelector("#" + spanId).style.display = "none";
+            return true;
         }
     }
 
@@ -14,9 +16,11 @@ export default class Validation {
         if (input.match(regex)) {
             document.querySelector("#" + spanId).innerHTML = "";
             document.querySelector("#" + spanId).style.display = "none";
+            return true;
         } else {
             document.querySelector("#" + spanId).innerHTML = message;
             document.querySelector("#" + spanId).style.display = "block";
+            return false;
         }
     }
 }
