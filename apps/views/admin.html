@@ -141,87 +141,89 @@
 
       <!-- The Modal -->
       <div class="modal fade" id="myModal">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header">
-              <h4 class="modal-title">Modal Heading</h4>
-              <button type="button" class="close" data-dismiss="modal">
-                &times;
-              </button>
+        <form id="popupModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                  &times;
+                </button>
+              </div>
+              <!-- Modal body -->
+              <div class="modal-body">
+                <div class="form-group">
+                  <label>Tên Sản Phẩm</label>
+                  <input
+                    id="TenSP"
+                    class="form-control spPro"
+                    placeholder="Nhập vào tên sản phẩm"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Giá</label>
+                  <input
+                    id="GiaSP"
+                    class="form-control spPro"
+                    placeholder="Nhập vào giá"
+                  />
+                </div>   
+                <div class="form-group">
+                  <label>Screen</label>
+                  <input
+                    id="manHinh"
+                    class="form-control spPro"
+                    placeholder="Nhập vào screen"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Camera</label>
+                  <input
+                    id="camera"
+                    class="form-control spPro"
+                    placeholder="Nhập vào camera"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Front Camera</label>
+                  <input
+                    id="camera2"
+                    class="form-control spPro"
+                    placeholder="Nhập vào camera"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Hình Ảnh</label>
+                  <input
+                    id="HinhSP"
+                    class="form-control spPro"
+                    placeholder="Nhập vào hình sản phẩm"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Mô tả</label>
+                  <textarea class="form-control spPro" id="motaSP" cols="20" rows="5"></textarea>
+                  
+                </div>
+                <div class="form-group">
+                  <label>Loai</label>
+                  <input
+                    id="loaiSP"
+                    class="form-control spPro"
+                    placeholder="Nhập vào loai sản phẩm"
+                  />
+                </div>
+              </div>
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-warning" id="btnCapNhat">Cập Nhật</button>
+                  <button type="button" class="btn btn-warning" id="btnThemMon">Thêm</button>
+                </div>
             </div>
-            <!-- Modal body -->
-            <div class="modal-body">
-              <div class="form-group">
-                <label>Tên Sản Phẩm</label>
-                <input
-                  id="TenSP"
-                  class="form-control spPro"
-                  placeholder="Nhập vào tên sản phẩm"
-                />
-              </div>
-              <div class="form-group">
-                <label>Giá</label>
-                <input
-                  id="GiaSP"
-                  class="form-control spPro"
-                  placeholder="Nhập vào giá"
-                />
-              </div>   
-              <div class="form-group">
-                <label>Screen</label>
-                <input
-                  id="manHinh"
-                  class="form-control spPro"
-                  placeholder="Nhập vào screen"
-                />
-              </div>
-              <div class="form-group">
-                <label>Camera</label>
-                <input
-                  id="camera"
-                  class="form-control spPro"
-                  placeholder="Nhập vào camera"
-                />
-              </div>
-              <div class="form-group">
-                <label>Front Camera</label>
-                <input
-                  id="camera2"
-                  class="form-control spPro"
-                  placeholder="Nhập vào camera"
-                />
-              </div>
-              <div class="form-group">
-                <label>Hình Ảnh</label>
-                <input
-                  id="HinhSP"
-                  class="form-control spPro"
-                  placeholder="Nhập vào hình sản phẩm"
-                />
-              </div>
-              <div class="form-group">
-                <label>Mô tả</label>
-                <textarea class="form-control spPro" id="motaSP" cols="20" rows="5"></textarea>
-                
-              </div>
-              <div class="form-group">
-                <label>Loai</label>
-                <input
-                  id="loaiSP"
-                  class="form-control spPro"
-                  placeholder="Nhập vào loai sản phẩm"
-                />
-              </div>
-            </div>
-            <!-- Modal footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-warning" id="btnCapNhat">Cập Nhật</button>
-                <button type="button" class="btn btn-warning" id="btnThemMon">Thêm</button>
-              </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
     <div id="container"></div>
