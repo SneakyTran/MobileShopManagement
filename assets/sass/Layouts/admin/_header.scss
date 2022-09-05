@@ -1,0 +1,42 @@
+header {
+    #adHead.header__content {
+        @include styleFlexDisplay(space-between, center);
+        .header__left {
+            @include styleFlexDisplay(flex-start, center);
+            height: 60px;
+            padding-left: 20px;
+            img {
+                display: inline-block;
+                width: 175px;
+                height: auto;
+                margin-right: 20px;
+            }
+            .btn--toggle i {
+                padding: 0 15px;
+                margin-left: 15px;
+                font-size: 22px;
+            }
+            .top--nav--search {
+                position: relative;
+                margin-left: 15px;
+                input{
+                    border-radius: 0.5rem;
+                    box-shadow: rgb(209 243 255 / 33%) 0px 0.2px 3px 0.1px;
+                }
+                button {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    padding: 6px 15px;
+                    color: #333;
+                    background-color: transparent;
+                    border-color: transparent;
+                }
+            }
+        }
+
+        .header__right{
+            
+        }
+    }
+}

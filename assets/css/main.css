@@ -1531,4 +1531,45 @@ footer .footer .footer-bot {
 }
 footer .footer .footer-bot .bottom-payment-icons {
   margin: -20px 0;
+}
+
+header #adHead.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header #adHead.header__content .header__left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60px;
+  padding-left: 20px;
+}
+header #adHead.header__content .header__left img {
+  display: inline-block;
+  width: 175px;
+  height: auto;
+  margin-right: 20px;
+}
+header #adHead.header__content .header__left .btn--toggle i {
+  padding: 0 15px;
+  margin-left: 15px;
+  font-size: 22px;
+}
+header #adHead.header__content .header__left .top--nav--search {
+  position: relative;
+  margin-left: 15px;
+}
+header #adHead.header__content .header__left .top--nav--search input {
+  border-radius: 0.5rem;
+  box-shadow: rgba(209, 243, 255, 0.33) 0px 0.2px 3px 0.1px;
+}
+header #adHead.header__content .header__left .top--nav--search button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 6px 15px;
+  color: #333;
+  background-color: transparent;
+  border-color: transparent;
 }/*# sourceMappingURL=main.css.map */
