@@ -20,7 +20,7 @@ let loadProduct = (prodList) => {
         }
         content += `
         <div class="item">
-            <a id="product__id" href="ViewProduct.html?id=${id}">
+            <a id="product__id" href="apps/views/ViewProduct.html?id=${id}">
             <div class="product__item">
                         <div class="product__img">
                             <img class="img-fluid" src="${img}" alt="">
