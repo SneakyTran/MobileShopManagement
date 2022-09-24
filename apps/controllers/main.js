@@ -296,7 +296,7 @@ let changeQuantity = (type, e) => {
         typeChangeVal = 1;
     }
     //change total price of cart
-    if (indexChange == -1) {
+    if (indexChange == -1 && inputEle.value < 1) {
         return;
     } else {
         let totalEle = document.querySelector(".cart__total .total").innerHTML;
