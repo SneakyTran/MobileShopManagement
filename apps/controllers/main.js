@@ -296,9 +296,12 @@ let changeQuantity = (type, e) => {
         typeChangeVal = 1;
     }
     //change total price of cart
-    if (indexChange == -1 && inputEle.value < 1) {
+    if (indexChange == -1) {
         return;
     } else {
+        if (typeChangeVal == -1 && inputEle.value == 1) {
+            return;
+        }
         let totalEle = document.querySelector(".cart__total .total").innerHTML;
         totalPrice = calcTotalPrice(
             Number(totalEle.replace("$", "")),
@@ -329,16 +332,8 @@ let addToCart = (idClick) => {
         alert("Số lượng không hợp lệ!!!");
         return;
     } else {
-        let {
-            name,
-            price,
-            screen,
-            backCamera,
-            frontCamera,
-            img,
-            desc,
-            type,
-        } = product;
+        let { name, price, screen, backCamera, frontCamera, img, desc, type } =
+            product;
         if (cartProdList.length == 0) {
             cartProdList.push(
                 new CartProduct(
